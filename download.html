@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>ProofMark™ — Your Downloads</title>
+<style>
+  :root { --bg:#0b0e14; --panel:#131824; --line:#26304a; --txt:#e9edf7; --dim:#94a1c0; --accent:#7c9cff; --good:#5eead4; --bad:#f87171; }
+  * { margin:0; padding:0; box-sizing:border-box; }
+  body { background:var(--bg); color:var(--txt); font-family:'Segoe UI',system-ui,sans-serif; min-height:100vh; }
+  .wrap { max-width:820px; margin:0 auto; padding:40px 20px 80px; }
+  .logo { font-size:22px; font-weight:700; margin-bottom:6px; letter-spacing:-0.02em; }
+  .logo span { color:var(--accent); }
+  .sub { color:var(--dim); font-size:14px; margin-bottom:32px; }
+  .gate { background:var(--panel); border:1px solid var(--line); border-radius:14px; padding:28px; margin-bottom:28px; }
+  .gate h2 { font-size:18px; margin-bottom:8px; }
+  .gate p { color:var(--dim); font-size:13px; margin-bottom:18px; }
+  input { width:100%; background:var(--bg); border:1px solid var(--line); color:var(--txt); padding:12px 14px; border-radius:8px; font-size:15px; margin-bottom:12px; }
+  .btn { background:var(--accent); color:#0a0e18; border:none; padding:12px 20px; border-radius:8px; font-weight:700; font-size:14px; cursor:pointer; width:100%; }
+  .btn:hover { filter:brightness(1.1); }
+  .err { color:var(--bad); font-size:13px; margin-top:10px; min-height:18px; }
+  .locked { display:none; }
+  .files { display:grid; gap:12px; }
+  .file { background:var(--panel); border:1px solid var(--line); border-radius:12px; padding:16px 18px; display:flex; align-items:center; justify-content:space-between; gap:14px; }
+  .file h3 { font-size:15px; margin-bottom:3px; }
+  .file p { color:var(--dim); font-size:12.5px; line-height:1.45; }
+  .file .btn { width:auto; padding:9px 16px; font-size:12.5px; flex-shrink:0; }
+  .badge { display:inline-block; background:rgba(94,234,212,0.12); color:var(--good); font-size:11px; padding:2px 10px; border-radius:12px; font-weight:600; margin-bottom:6px; }
+  footer { margin-top:40px; text-align:center; color:var(--dim); font-size:12px; }
+  .start { background:var(--panel); border:1px solid var(--line); border-radius:12px; padding:20px; margin-bottom:16px; }
+  .start h3 { font-size:16px; margin-bottom:8px; }
+  .start ol { padding-left:20px; color:var(--dim); font-size:13.5px; line-height:1.9; }
+</style>
+</head>
+<body>
+<div class="wrap">
+  <div class="logo">✍️ Proof<span>Mark</span>™</div>
+  <div class="sub">The Human Edit System™ — your member downloads</div>
+
+  <div id="gateBox" class="gate">
+    <h2>🔐 Unlock your downloads</h2>
+    <p>Enter the email you purchased with and your personal access code (sent in your order confirmation email).</p>
+    <input id="email" type="email" placeholder="you@email.com" autocomplete="email">
+    <input id="code" type="text" placeholder="PM-XXXXX-XXXXX" autocomplete="off">
+    <button class="btn" onclick="unlock()">Unlock →</button>
+    <div class="err" id="err"></div>
+  </div>
+
+  <div id="memberArea" class="locked">
+    <div class="start">
+      <span class="badge">✅ Unlocked</span>
+      <h3>Start here — your 3 phases</h3>
+      <ol>
+        <li><b>REPRODUCE (Days 1–10):</b> run E·S·D on one AI draft a day — 20 minutes, keep your Slop List</li>
+        <li><b>DIRECT (Days 11–20):</b> Brief-first every time. Build your Voice Card and paste it into every prompt</li>
+        <li><b>COMPOUND (Days 21–30):</b> publish 20 ProofMarked pieces — track who quotes your line back</li>
+      </ol>
+    </div>
+    <div class="files">
+      <div class="file">
+        <div><h3>📘 1. The ProofMark System</h3><p>The core method — the E·S·D mechanism, 4 moves, 30-day arc. Start here.</p></div>
+        <button class="btn" onclick="dl('01-the-proofmark-system.pdf', this)">Download</button>
+      </div>
+      <div class="file">
+        <div><h3>🚫 2. The Slop List</h3><p>60+ AI tells, weak-word swaps, and the 10 named "slop moves" to strip. Your Fog Pass reference.</p></div>
+        <button class="btn" onclick="dl('02-the-slop-list.pdf', this)">Download</button>
+      </div>
+      <div class="file">
+        <div><h3>✏️ 3. The Five Passes Workbook</h3><p>The 45-minute editing system, pass by pass — Fog, Cadence, Specific, Stake, Receipt.</p></div>
+        <button class="btn" onclick="dl('03-the-five-passes-workbook.pdf', this)">Download</button>
+      </div>
+      <div class="file">
+        <div><h3>🎙️ 4. The Voice Fingerprint Kit</h3><p>Extract your voice into a reusable Voice Card, then inject it into any model. Every time.</p></div>
+        <button class="btn" onclick="dl('04-the-voice-fingerprint-kit.pdf', this)">Download</button>
+      </div>
+      <div class="file">
+        <div><h3>🔁 5. The Rewrite Library</h3><p>28 before/after rewrites across the contexts you actually write in. Read the move, not the words.</p></div>
+        <button class="btn" onclick="dl('05-the-rewrite-library.pdf', this)">Download</button>
+      </div>
+      <div class="file">
+        <div><h3>🧰 6. The Prompt &amp; System Pack</h3><p>12 copy-paste prompts — brief, outline, draft, critique, honesty check. Plus the daily cheat table.</p></div>
+        <button class="btn" onclick="dl('06-the-prompt-and-system-pack.pdf', this)">Download</button>
+      </div>
+      <div class="file">
+        <div><h3>📡 7. By-Channel Playbooks</h3><p>Cold email, LinkedIn, X, docs, essays, sales, memos, newsletters — the exact routine + hard limits for each.</p></div>
+        <button class="btn" onclick="dl('07-by-channel-playbooks.pdf', this)">Download</button>
+      </div>
+      <div class="file">
+        <div><h3>📊 8. The Tracker &amp; ProofMark Card</h3><p>30-day log, weekly review card, the 60-second ProofMark Card, and your day-30 scorecard.</p></div>
+        <button class="btn" onclick="dl('08-the-tracker-and-proofmark-card.pdf', this)">Download</button>
+      </div>
+    </div>
+  </div>
+
+  <footer>ProofMark™ · The Human Edit System™ · educational writing system · not academic-integrity advice · follow your institution's and employer's AI policies</footer>
+</div>
+
+<script>
+function unlock() {
+  const email = document.getElementById('email').value.trim();
+  const code = document.getElementById('code').value.trim();
+  const err = document.getElementById('err');
+  if (!email || !code) { err.textContent = 'Please enter both email and access code.'; return; }
+  fetch('/api/verify', { method: 'POST', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify({ email, code }) })
+    .then(r => r.json())
+    .then(d => {
+      if (d.ok) {
+        sessionStorage.setItem('pm_email', email);
+        sessionStorage.setItem('pm_code', code);
+        document.getElementById('gateBox').style.display = 'none';
+        document.getElementById('memberArea').classList.remove('locked');
+        document.getElementById('memberArea').style.display = 'block';
+        err.textContent = '';
+      } else {
+        err.textContent = d.error || 'Access denied. Check your code and email.';
+      }
+    })
+    .catch(() => { err.textContent = 'Network error — try again.'; });
+}
+
+function dl(file, btn) {
+  const email = sessionStorage.getItem('pm_email');
+  const code = sessionStorage.getItem('pm_code');
+  if (!email || !code) { alert('Session expired — please unlock again.'); location.reload(); return; }
+  const orig = btn.textContent;
+  btn.textContent = '⏳ …';
+  btn.disabled = true;
+  fetch('/api/download', { method: 'POST', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify({ email, code, file }) })
+    .then(async r => {
+      if (!r.ok) { const d = await r.json().catch(() => ({})); throw new Error(d.error || 'Download failed (' + r.status + ')'); }
+      const blob = await r.blob();
+      const a = document.createElement('a');
+      a.href = URL.createObjectURL(blob);
+      a.download = file;
+      document.body.appendChild(a);
+      a.click();
+      a.remove();
+      btn.textContent = '✅ Sent';
+    })
+    .catch(e => { alert(e.message); btn.textContent = orig; })
+    .finally(() => { btn.disabled = false; setTimeout(() => { if (btn.textContent === '✅ Sent') btn.textContent = orig; }, 2500); });
+}
+
+// auto-unlock if already verified this session
+const em = sessionStorage.getItem('pm_email');
+const ec = sessionStorage.getItem('pm_code');
+if (em && ec) {
+  fetch('/api/verify', { method: 'POST', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify({ email: em, code: ec }) })
+    .then(r => r.json())
+    .then(d => { if (d.ok) { document.getElementById('gateBox').style.display = 'none'; document.getElementById('memberArea').classList.remove('locked'); document.getElementById('memberArea').style.display = 'block'; } });
+}
+document.getElementById('code').addEventListener('keydown', (e) => { if (e.key === 'Enter') unlock(); });
+</script>
+</body>
+</html>
