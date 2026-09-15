@@ -113,6 +113,9 @@ system is in the pack.
 
 Stop sounding like everyone. Start signing your work.
 — The ProofMark Team`;
+  const res = await fetch(`https://api.agentmail.to/v0/inboxes/${MAIL_FROM}/messages/send`, {
+    method: 'POST',
+    headers: { 'Content-Type': 'application/json', Authorization: `Bearer ${AGENTMAIL_KEY}` },
     body: JSON.stringify({ to: [buyer.email], subject: "Your ProofMark™ access is live — The Human Edit System", text: body }),
   });
   return res.ok;

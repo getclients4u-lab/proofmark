@@ -63,7 +63,7 @@ Hey {{first_name}},
 
 It's live: **ProofMark™ — The Human Edit System™**
 
-→ **Get it for $19:** https://buy.stripe.com/test_fZudRacnm0cH9XN8d11Nu0q
+→ **Get it for $19:** https://buy.stripe.com/test_00wfZi2MMcZtgmbal91Nu0r
 
 Yesterday I told you the tells. Today, the mechanism.
 
@@ -88,7 +88,7 @@ Fix them in that order and the "is this AI?" question stops being interesting. B
 
 **Why $19 and not $97?** Because if this makes one client reply to you, it's paid for itself about forty times. That's the entire pitch. It's the founder price for the first 100 writers, then it goes to $39.
 
-→ **Grab it here:** https://buy.stripe.com/test_fZudRacnm0cH9XN8d11Nu0q
+→ **Grab it here:** https://buy.stripe.com/test_00wfZi2MMcZtgmbal91Nu0r
 
 **60-day, no-questions-asked guarantee.** Run the Fog Pass on one real document. If it doesn't change how you edit, email me and I'll refund you in full — keep the PDFs either way.
 
@@ -142,7 +142,7 @@ That's Pass 1 and Pass 3 of the Five Passes, out of five. It takes about ten min
 
 If that lands for you, the other three passes are in the pack.
 
-→ **ProofMark™ — $19:** https://buy.stripe.com/test_fZudRacnm0cH9XN8d11Nu0q
+→ **ProofMark™ — $19:** https://buy.stripe.com/test_00wfZi2MMcZtgmbal91Nu0r
 
 60-day guarantee. Keep everything either way.
 
@@ -156,7 +156,7 @@ P.S. If the test above changed your draft, reply and tell me what number you add
 
 ## Sending notes
 
-- **Links:** all CTAs → https://buy.stripe.com/test_fZudRacnm0cH9XN8d11Nu0q
+- **Links:** all CTAs → https://buy.stripe.com/test_00wfZi2MMcZtgmbal91Nu0r
 - **Merge fields:** `{{first_name}}` only. Plain, no styling beyond bold/italics.
 - **Cadence:** E1 Day 0 · E2 Day 1 · E3 Day 3. Don't add more — three is the sequence.
 - **Post-purchase:** the automated access-code email fires from `/api/webhook` (AgentMail), separate from this launch sequence.
